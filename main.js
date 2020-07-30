@@ -3,17 +3,29 @@ let popped = false;
 let myLibrary = [];
 
 //BOOK Object constructor
-function Book(title="No Title", author="No Author", pages=0, read=false) {
+// function Book(title="No Title", author="No Author", pages=0, read=false) {
     
-    this.title = (title == "" ? "No Title" : title);
-    this.author = (author == "" ? "No Author" : author);
-    this.pages = (pages == "" ? "No Pages" : pages);
-    this.read = read;
-    this.info = function () {
-        return (this.read ? "Read." : "Not Read");
-    };
-}
+//     this.title = (title == "" ? "No Title" : title);
+//     this.author = (author == "" ? "No Author" : author);
+//     this.pages = (pages == "" ? "No Pages" : pages);
+//     this.read = read;
+//     this.info = function () {
+//         return (this.read ? "Read." : "Not Read");
+//     };
+// }
 
+class Book{
+    constructor(title="No Title", author="No Author", pages=0, read=false){
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+
+    info() {
+        return (this.read ? "Read." : "Not Read");
+    }
+}
 
 //Adds book to library/ Array
 function addBookToLibrary(book) {
